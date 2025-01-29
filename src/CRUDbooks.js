@@ -37,7 +37,7 @@ app.get('/books/:id' ,(req,res)=> {
 
 app.post('/books',(req,res) => {
     const book = { 
-        id : books.length +1,
+        id : book.length +1,
         title: req.body.title,
         author: req.body.author
     };
@@ -45,10 +45,6 @@ app.post('/books',(req,res) => {
     res.send(book);
 
 });
-
-
-
-/*app.put('/books/')*/
 
 const port = process.env.PORT || 3000;
 app.listen(port,() => console.log(`Listening on port http://localhost:${port}......`));
